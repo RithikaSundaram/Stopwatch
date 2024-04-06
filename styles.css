@@ -1,0 +1,134 @@
+.container {
+  margin: 10px auto;
+  border: 2px solid #f9f9f9;
+  width: 500px;
+  height: 500px;
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: crimson;
+  animation: pulse 1s infinite alternate;
+}
+
+.timer {
+  font-family: "Roboto", sans-serif;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.btn1,
+.btn2,
+.btn3,
+.clearbtn {
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.btn1 {
+  background-color: #d5eb12;
+}
+
+.btn2 {
+  background-color: #1dee0e;
+}
+
+.btn3 {
+  background-color: #f50303;
+}
+
+.clearbtn {
+  background-color: aqua;
+  margin-top: 40px;
+}
+
+.clearbtn:hover,
+.btn1:hover,
+.btn2:hover,
+.btn3:hover {
+  transform: scale(1.05);
+}
+
+.lapdiv {
+  margin-top: 40px;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.lapdiv > ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.lapdiv > ul > li {
+  margin-bottom: 5px;
+}
+/* For Animation*/
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease forwards;
+}
